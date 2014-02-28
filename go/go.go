@@ -104,9 +104,10 @@ func flip(name string) string {
 func main() {
 	nArgs := len(os.Args)
 	if nArgs >= 3 && os.Args[1] == "to" && os.Args[2] == "hell" {
-		name := os.Args[3]
+		var name string
 		var killed int
 		if nArgs > 3 {
+			name := os.Args[3]
 			killed = killall(name)
 		}
 		if killed <= 0 {
