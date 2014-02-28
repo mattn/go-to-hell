@@ -21,5 +21,5 @@ func killall(name string) int {
 			syscall.Kill(pid, syscall.SIGKILL)
 		}
 	}
-	return len(lines)
+	return len(lines) - 1
 }
