@@ -107,7 +107,7 @@ func main() {
 		var name string
 		var killed int
 		if nArgs > 3 {
-			name := os.Args[3]
+			name = os.Args[3]
 			killed = killall(name)
 		}
 		if killed <= 0 {
