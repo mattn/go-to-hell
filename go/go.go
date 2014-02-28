@@ -112,7 +112,7 @@ func main() {
 		if killed <= 0 {
 			fmt.Println("(；￣Д￣) . o O( It’s not very effective... )")
 		} else {
-			fmt.Printf("%s (x%d)", flip(name), killed)
+			fmt.Printf("%s (x%d)\n", flip(name), killed)
 		}
 	} else {
 		gocmd := findGo()
