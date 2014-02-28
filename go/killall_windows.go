@@ -6,7 +6,7 @@ import (
 )
 
 func killall(name string) int {
-	b, err := exec.Command("taskkill", "/f", "/im", name + "*").Output()
+	b, err := exec.Command("taskkill", "/f", "/im", name+"*").Output()
 	if err != nil {
 		return 0
 	}

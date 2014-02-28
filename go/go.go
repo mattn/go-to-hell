@@ -28,10 +28,10 @@ func findGo() string {
 		return ""
 	}
 	if runtime.GOOS == "windows" {
-		pathext := strings.Split(os.Getenv("PATHEXT"),  string(filepath.ListSeparator))
+		pathext := strings.Split(os.Getenv("PATHEXT"), string(filepath.ListSeparator))
 		for _, path := range strings.Split(os.Getenv("PATH"), string(filepath.ListSeparator)) {
 			for _, ext := range pathext {
-				fullp := filepath.Join(path, "go." + ext)
+				fullp := filepath.Join(path, "go."+ext)
 				if fullp != p {
 					if _, err = os.Stat(fullp); err == nil {
 						return fullp
@@ -95,9 +95,9 @@ func flip(name string) string {
 	for _, c := range []rune(strings.ToLower(name)) {
 		s = append(s, string(c))
 	}
-    for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-        s[i], s[j] = s[j], s[i]
-    }
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
 	return replacer.Replace(strings.Join(s, ""))
 }
 
